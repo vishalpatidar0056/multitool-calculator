@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Multitool  Calculator</title>
     
     <!-- Premium AI Typography: Outfit -->
@@ -14,6 +14,105 @@
     <script src="dashboard-script.js" defer></script>
 </head>
 <body>
+
+    <!-- Mobile Top Navigation Header (Visible only on mobile) -->
+<header class="mobile-header">
+    <div class="mobile-logo">OMNITOOL</div>
+    <button id="mobile-menu-btn" class="hamburger-btn" aria-label="Open Navigation">
+        ☰
+    </button>
+</header>
+
+<!-- Mobile Dark Overlay -->
+<div id="mobile-overlay" class="mobile-overlay"></div>
+
+<!-- Mobile Category Drawer -->
+<nav id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+        <h2>Categories</h2>
+        <button id="close-drawer-btn" class="close-drawer-btn">&times;</button>
+    </div>
+
+    <div class="mobile-categories-list">
+        
+        <!-- Category 1: Calculators -->
+        <div class="mobile-category">
+            <div class="mobile-category-title">
+                <span> <img src="icons/calc-icon.png" alt="Calculator" class="sidebar-icon"> Calculators</span>
+                <span class="chevron">▼</span>
+            </div>
+           <div class="mobile-tool-sublist">
+                   <!-- Notice how these paths perfectly match your folder names! -->
+         <div class="mobile-tool-item" data-target="CalculatorApp/index.html">Calculator</div>
+<div class="mobile-tool-item" data-target="LCMApp/index.html">LCM Calculator</div>
+<div class="mobile-tool-item" data-target="ScientificCalculatorApp/scientific-calculator.html">Scientific Calculator</div>
+<div class="mobile-tool-item" data-target="EngineeringCalculatorApp/engineering-calculator.html">Engineering Calculator</div>
+<div class="mobile-tool-item" data-target="PercentageCalculatorApp/percentage-calculator.html">Percentage Calculator</div>
+<div class="mobile-tool-item" data-target="RatioCalculatorApp/ratio-calculator.html">Ratio Calculator</div>
+<div class="mobile-tool-item" data-target="ProportionCalculatorApp/proportion-calculator.html">Proportion Calculator</div>
+<div class="mobile-tool-item" data-target="AverageCalculatorApp/average-calculator.html">Average Calculator</div>
+<div class="mobile-tool-item" data-target="MeanCalculatorApp/mean-calculator.html">Mean Calculator</div>
+<div class="mobile-tool-item" data-target="MedianCalculatorApp/median-calculator.html">Median Calculator</div>
+<div class="mobile-tool-item" data-target="ModeCalculatorApp/mode-calculator.html">Mode Calculator</div>
+<div class="mobile-tool-item" data-target="GCFCalculatorApp/gcf-calculator.html">GCF Calculator</div>
+<div class="mobile-tool-item" data-target="ExpressionEvaluatorApp/expression-evaluator.html">Expression Evaluator</div>
+<div class="mobile-tool-item" data-target="PrimeNumberCheckerApp/prime-checker.html">Prime Number Checker</div>
+
+            </div>
+        </div>
+          <div class="mobile-category">
+            <div class="mobile-category-title">
+                <span> Main Tools</span>
+                <span class="chevron">▼</span>
+            </div>
+            <div class="mobile-tool-sublist">
+        <div class="mobile-tool-item" data-target="FinanceApp/finance.html">Finance</div>
+<div class="mobile-tool-item" data-target="DateTimeApp/datetime.html">Date &amp; Time</div>
+<div class="mobile-tool-item" data-target="GeometryApp/geometry.html">Geometry</div>
+<div class="mobile-tool-item" data-target="ConverterApp/converter.html">Converter</div>
+<div class="mobile-tool-item" data-target="StatisticsApp/statistics.html">Statistics</div>
+<div class="mobile-tool-item" data-target="AlgebraApp/algebra.html">Algebra</div>
+<div class="mobile-tool-item" data-target="QRCodeGeneratorApp/qr-generator.html">QR Code Generator</div>
+<div class="mobile-tool-item" data-target="BarcodeGeneratorApp/barcode-generator.html">Barcode Generator</div>
+</div>
+       </div>
+  <div class="mobile-category">
+            <div class="mobile-category-title">
+                <span> Programming Tools</span>
+                <span class="chevron">▼</span>
+            </div>
+            <div class="mobile-tool-sublist">
+ 
+<div class="mobile-tool-item" data-target="JSONFormatterApp/json-formatter.html">JSON Formatter</div>
+<div class="mobile-tool-item" data-target="JSONValidatorApp/json-validator.html">JSON Validator</div>
+<div class="mobile-tool-item" data-target="JSONViewerApp/json-viewer.html">JSON Viewer</div>
+<div class="mobile-tool-item" data-target="DevToolsApp/dev-tools.html">Developer Tools</div>
+<div class="mobile-tool-item" data-target="ColorPickerApp/color-picker.html">Color Picker</div>
+<div class="mobile-tool-item" data-target="XMLFormatterApp/xml-formatter.html">XML Formatter</div>
+<div class="mobile-tool-item" data-target="XMLValidatorApp/xml-validator.html">XML Validator</div>
+<div class="mobile-tool-item" data-target="YAMLFormatterApp/yaml-formatter.html">YAML Formatter</div>
+<div class="mobile-tool-item" data-target="HTMLFormatterApp/html-formatter.html">HTML Formatter</div>
+<div class="mobile-tool-item" data-target="CSSFormatterApp/css-formatter.html">CSS Formatter</div>
+
+</div>
+       </div>
+
+
+
+       <div class="mobile-category">
+            <div class="mobile-category-title">
+                <span> Health & Fitness</span>
+                <span class="chevron">▼</span>
+            </div>
+            <div class="mobile-tool-sublist">
+ 
+<div class="mobile-tool-item" data-target="HealthApp/health.html">BMI Calculator</div>
+
+</div>
+
+
+
+</nav>
     <!-- Animated Aurora Background -->
     <div class="aurora-bg">
         <div class="blob blob-1"></div>
@@ -42,10 +141,6 @@
 
 
 
-
-           
-          
-           
         <!-- Sidebar Logo/Header (Adjust if you had a title here) -->
         <div style="padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
             <h2 style="font-size: 1.2rem; font-weight: 800; color: #fff;">Tools categories</h2>
@@ -75,7 +170,7 @@
                 <img src="icons/scientific-calculator-icon.png" alt="Scientific Calc" class="sidebar-icon"> Scientific Calculator
          </button>
           <button class="nav-btn" data-target="EngineeringCalculatorApp/engineering-calculator.html">
-                <img src="icons/engineering-calculator-icon.png" alt="Engineering Calc" class="sidebar-icon"> Engineering Calculator
+                <img src="icons/engineering-calculator-icon.png" alt="Engineering Calc" class="sidebar-icon">Engineering Calculator
          </button>
                <button class="nav-btn" data-target="PercentageCalculatorApp/percentage-calculator.html">
                 <img src="icons/percentage-calculator-icon.png" alt="Percentage Calc" class="sidebar-icon"> Percentage Calculator
@@ -104,8 +199,8 @@
          <button class="nav-btn" data-target="ExpressionEvaluatorApp/expression-evaluator.html">
             <img src="icons/expression-evaluator-icon.png" alt="Expression Evaluator" class="sidebar-icon"> Expression Evaluator
          </button>
-          <button class="nav-btn" data-target="PrimeNumberCheckerApp/prime-checker.html">
-           <img src="icons/prime-checker-icon.png" alt="Prime Number Checker" class="sidebar-icon"> Prime Number Checker
+          <button   class="nav-btn" data-target="PrimeNumberCheckerApp/prime-checker.html">
+           <img src="icons/prime-checker-icon.png"  class="sidebar-icon"> Prime Number Checker
          </button>
 
          </div>
@@ -171,7 +266,7 @@
                 <img src="icons/json-viewer-icon.png" alt="JSON Viewer" class="sidebar-icon"> JSON Viewer
             </button>
             <button class="nav-btn" data-target="DevToolsApp/dev-tools.html">
-                <img src="icons/dev-icon.png" alt="Developer" class="sidebar-icon"> Base64 Encoder/Decoder
+                <img src="icons/dev-icon.png" alt="Developer" class="sidebar-icon">Encoder/Decoder
             </button>
             <button class="nav-btn" data-target="ColorPickerApp/color-picker.html">
                   <img src="icons/color-picker-icon.png" alt="Color Picker" class="sidebar-icon"> Color Picker
@@ -210,16 +305,17 @@
 
 
          </div>
-        
-
         </nav> <!-- Closes the navigation menu -->
     </aside> 
 
-
+           
+           
+         <div class="main-content">
+           <iframe id="main-tool-frame" src="CalculatorApp/index.html" width="100%" height="100%" frameborder="0"></iframe>
+         </div> 
+           
     
-    <main class="main-content">
-        <iframe id="app-frame" src="CalculatorApp/index.html" title="Active Application"></iframe>
-    </main>
+   
 
 </div> <!-- Closes the whole dashboard container -->
 
@@ -293,24 +389,8 @@
     <!-- Link the AI Logic Script -->
     <script src="ai-chat.js"></script>
 
-<!-- Script to make the Dropdowns open and close -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdownBtns = document.querySelectorAll('.nav-dropdown-btn');
 
-        dropdownBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-                    content.style.maxHeight = "0px";
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        });
-    });
-</script>
+<script src="navigation.js"></script>
 
 </body>
 </html>
