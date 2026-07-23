@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools Module</title>
+    <link rel="stylesheet" href="dev-style.css">
+    <script src="dev-script.js" defer></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <button id="theme-toggle" class="theme-btn">
+              <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+         </button>
+        <header>
+            <h1>Base64 Encoder/Decoders</h1>
+            <p>MADE BY LUFFY </p>
+        </header>
+
+        <div class="tools-grid">
+            <!-- Tool 1: Base64 Encoder / Decoder -->
+            <div class="tool-card">
+                <h2>Base64 Encoder/Decoder</h2>
+                <div class="input-group">
+                    <label for="base64-input">Input Text or Base64:</label>
+                    <textarea id="base64-input" rows="4" placeholder="Type here..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="btn accent" id="btn-encode">Encode to Base64</button>
+                    <button class="btn secondary" id="btn-decode">Decode from Base64</button>
+                </div>
+                <div class="input-group">
+                    <label for="base64-output">Result:</label>
+                    <textarea id="base64-output" rows="4" readonly placeholder="Result will appear here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Tool 2: Color Converter -->
+            <div class="tool-card">
+                <h2>Color Converter</h2>
+                <div class="color-layout">
+                    <div class="color-inputs">
+                        <div class="input-group">
+                            <label for="hex-input">HEX (e.g., #3b82f6):</label>
+                            <input type="text" id="hex-input" placeholder="#000000">
+                        </div>
+                        <div class="input-group">
+                            <label for="rgb-input">RGB (e.g., rgb(59, 130, 246)):</label>
+                            <input type="text" id="rgb-input" placeholder="rgb(0, 0, 0)">
+                        </div>
+                    </div>
+                    <div class="color-preview-box">
+                        <div id="color-preview" class="preview-circle"></div>
+                        <span id="color-name">Preview</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

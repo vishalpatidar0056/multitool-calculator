@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --accent: #10b981; 
+    --accent-hover: #059669;
+    --accent-rgb: 16, 185, 129; 
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Outfit', sans-serif; }
+body { background: transparent; color: #f8fafc; padding: 20px; overflow-y: overlay; }
+body::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
+
+.dashboard { max-width: 1000px; margin: 0 auto; padding-bottom: 50px; }
+header { text-align: center; margin-bottom: 50px; position: relative; }
+header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; background: linear-gradient(90deg, #ffffff, #94a3b8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; position: relative; }
+header h1::after { content: attr(data-text); position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(90deg, #00E5FF, #6D5DF6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: blur(24px); opacity: 0.5; z-index: -1; }
+header p { color: #94a3b8; font-size: 1.1rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.tool-card { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
+.tool-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.2); }
+.tool-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; color: #ffffff; display: flex; align-items: center; gap: 10px; }
+
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+input[type="number"], input[type="text"], input[type="date"], input[type="datetime-local"], select, textarea { background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff; padding: 16px; border-radius: 12px; font-size: 1rem; width: 100%; transition: all 0.3s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); background: rgba(0, 0, 0, 0.4); box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.15), inset 0 2px 4px rgba(0,0,0,0.2); }
+
+.btn { position: relative; padding: 16px 24px; border: none; border-radius: 14px; font-size: 1.1rem; font-weight: 700; color: white; cursor: pointer; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background-size: 200% auto; z-index: 1; margin-top: 10px; }
+.btn.accent { background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-hover) 51%, var(--accent) 100%); box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.2), inset 0 1px 0 rgba(255,255,255,0.2); }
+.btn.accent:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 15px 30px rgba(var(--accent-rgb), 0.4), inset 0 1px 0 rgba(255,255,255,0.3); }
+.btn:active { transform: translateY(1px) scale(0.98); }
+.btn::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent); transform: skewX(-20deg); z-index: -1; }
+.btn:hover::after { left: 200%; transition: 0.7s ease-in-out; }
+
+.result-box { margin-top: 24px; padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 1.2rem; font-weight: 600; position: relative; overflow: hidden; line-height: 1.6; }
+.result-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accent); box-shadow: 0 0 15px var(--accent); }
+
+/* Health Tools Specific Layout */
+.row-inputs { display: flex; gap: 15px; }
+.row-inputs .input-group { flex: 1; }
+.normal { color: #34d399; text-shadow: 0 0 10px rgba(52,211,153,0.3); }
+.warning { color: #fbbf24; text-shadow: 0 0 10px rgba(251,191,36,0.3); }
+.danger { color: #f87171; text-shadow: 0 0 10px rgba(248,113,113,0.3); }
+
+@media (max-width: 600px) { .row-inputs { flex-direction: column; } }
+
+/* =========================================
+   LIGHT MODE / DAY THEME RECOVERY
+   ========================================= */
+body.light-mode, body.light-theme, body.light {
+    color: #0f172a;
+}
+
+/* Turn dark cards into white frosted glass */
+body.light .tool-card, body.light-mode .tool-card, body.light-theme .tool-card,
+body.light .calculator, body.light-mode .calculator, body.light-theme .calculator,
+body.light .history-panel, body.light-mode .history-panel, body.light-theme .history-panel,
+body.light .converter-panel, body.light-mode .converter-panel, body.light-theme .converter-panel,
+body.light .stat-box, body.light-mode .stat-box, body.light-theme .stat-box,
+body.light .result-box, body.light-mode .result-box, body.light-theme .result-box,
+body.light .display, body.light-mode .display, body.light-theme .display {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    color: #0f172a;
+}
+
+/* Fix Typography */
+body.light header h1, body.light-mode header h1, body.light-theme header h1 {
+    background: linear-gradient(90deg, #0f172a, #334155);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.light header h1::after, body.light-mode header h1::after, body.light-theme header h1::after {
+    opacity: 0.15; /* Dims the glowing shadow in light mode */
+}
+body.light header p, body.light label, body.light-mode header p, body.light-mode label, body.light h2, body.light-mode h2 {
+    color: #475569;
+}
+body.light .previous-operand, body.light-mode .previous-operand { color: #64748b; }
+body.light .current-operand, body.light-mode .current-operand { color: #0f172a; text-shadow: none; }
+
+/* Fix Inputs */
+body.light input, body.light select, body.light textarea,
+body.light-mode input, body.light-mode select, body.light-mode textarea,
+body.light-theme input, body.light-theme select, body.light-theme textarea {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #0f172a;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Fix Buttons */
+body.light .btn, body.light-mode .btn, body.light-theme .btn {
+    color: #0f172a;
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body.light .btn:hover, body.light-mode .btn:hover { background: rgba(0,0,0,0.08); }
+
+/* Keep colored accent buttons white-text */
+body.light .btn.accent, body.light-mode .btn.accent, body.light-theme .btn.accent,
+body.light .btn.equals, body.light-mode .btn.equals {
+    color: white;
+    background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-hover) 51%, var(--accent) 100%);
+}
+
+/* Fix Theme Button Specifically */
+body.light .theme-btn, body.light-mode .theme-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #0f172a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Glass Theme Button (Calculator Style) --- */
+.theme-btn {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    padding: 12px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    background: rgba(0, 0, 0, 0.3); /* The dark glass background */
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.3s; 
+    z-index: 100; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Light Mode version of the button background */
+body.light-theme .theme-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

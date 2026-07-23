@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="color-picker.css">
+    <script src="color-picker.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Color Picker">Color Picker</h1>
+            <p>Extract & Convert Colors</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Select a Color</h2>
+                
+                <div class="color-picker-container">
+                    <input type="color" id="color-input" value="#ec4899">
+                    <div id="color-preview" class="color-preview" style="background-color: #ec4899;"></div>
+                </div>
+
+                <div class="result-box">
+                    <div class="color-code-group">
+                        <label>HEX (Web Default)</label>
+                        <div class="copy-group">
+                            <input type="text" id="hex-output" value="#EC4899" readonly>
+                            <button class="btn accent copy-btn" data-copy="hex-output">Copy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="color-code-group">
+                        <label>RGB</label>
+                        <div class="copy-group">
+                            <input type="text" id="rgb-output" value="rgb(236, 72, 153)" readonly>
+                            <button class="btn accent copy-btn" data-copy="rgb-output">Copy</button>
+                        </div>
+                    </div>
+
+                    <div class="color-code-group" style="margin-bottom: 0;">
+                        <label>HSL</label>
+                        <div class="copy-group">
+                            <input type="text" id="hsl-output" value="hsl(330, 81.2%, 60.4%)" readonly>
+                            <button class="btn accent copy-btn" data-copy="hsl-output">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

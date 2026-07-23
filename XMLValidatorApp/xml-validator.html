@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Validator</title>
+    <link rel="stylesheet" href="xml-validator.css">
+    <script src="xml-validator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="XML Validator">XML Validator</h1>
+            <p>Check and Debug XML Syntax</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="panel-header">
+                    <h2>Input XML</h2>
+                    <div class="header-actions">
+                        <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        <button class="btn secondary small-btn copy-btn" data-copy="xml-input">Copy</button>
+                    </div>
+                </div>
+                
+                <textarea id="xml-input" placeholder='Paste your XML here to validate...&#10;Example:&#10;<note>&#10;  <to>Tove</to>&#10;  <from>Jani</from>&#10;</note>'></textarea>
+                
+                <button class="btn accent full-btn" id="btn-validate">Validate XML</button>
+
+                <!-- Status Output Banner -->
+                <div id="validation-result" class="result-banner" style="display: none;">
+                    <div class="status-icon" id="status-icon"></div>
+                    <div class="status-content">
+                        <h3 id="status-title">Status</h3>
+                        <p id="status-message">Message details will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="percentage-calculator.css">
+    <script src="percentage-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Percentage">Percentage</h1>
+            <p>Real-Time Percentage Math</p>
+        </header>
+
+        <div class="tools-grid">
+            
+            <!-- Calculator 1: X% of Y -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Find the Value</h2>
+                </div>
+                <p class="subtitle">Calculate a standard percentage (e.g., Tip, Tax, Discount)</p>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>What is</label>
+                        <div class="input-with-suffix">
+                            <input type="number" id="calc1-x" placeholder="20" step="any">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>of</label>
+                        <input type="number" id="calc1-y" placeholder="150" step="any">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <span>Result:</span>
+                    <span id="calc1-result" class="result-value">0</span>
+                </div>
+            </div>
+
+            <!-- Calculator 2: X is what % of Y -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Find the Percentage</h2>
+                </div>
+                <p class="subtitle">Calculate a proportion (e.g., Test Scores, Progress)</p>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>The number</label>
+                        <input type="number" id="calc2-x" placeholder="45" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>is what % of</label>
+                        <input type="number" id="calc2-y" placeholder="50" step="any">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <span>Result:</span>
+                    <span id="calc2-result" class="result-value">0%</span>
+                </div>
+            </div>
+
+            <!-- Calculator 3: % Increase/Decrease -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Find the Change</h2>
+                </div>
+                <p class="subtitle">Calculate percentage increase or decrease (e.g., Price changes, Growth)</p>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>From</label>
+                        <input type="number" id="calc3-x" placeholder="100" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>To</label>
+                        <input type="number" id="calc3-y" placeholder="125" step="any">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <span>Result:</span>
+                    <span id="calc3-result" class="result-value">0%</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Viewer</title>
+    <link rel="stylesheet" href="json-viewer.css">
+    <script src="json-viewer.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="JSON Viewer">JSON Viewer</h1>
+            <p>Interactive Syntax Highlighted Tree</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="code-workspace">
+                    
+                    <!-- Input Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Raw JSON Input</h2>
+                            <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        </div>
+                        <textarea id="json-input" placeholder='Paste JSON to visualize...&#10;{&#10;  "user": {&#10;    "id": 1,&#10;    "active": true,&#10;    "roles": ["admin", "editor"]&#10;  }&#10;}'></textarea>
+                        
+                        <div class="action-row">
+                            <button class="btn accent full-btn" id="btn-view">Render Viewer</button>
+                        </div>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Interactive Viewer</h2>
+                            <div class="header-actions">
+                                <button class="btn secondary small-btn" id="btn-collapse">Collapse All</button>
+                                <button class="btn secondary small-btn" id="btn-expand">Expand All</button>
+                            </div>
+                        </div>
+                        
+                        <!-- The interactive tree will be injected here -->
+                        <div id="viewer-output" class="viewer-container">
+                            <span style="color: var(--text-secondary);">Waiting for JSON data...</span>
+                        </div>
+                        
+                        <!-- Error Message Box -->
+                        <div id="error-msg" class="error-msg" style="display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

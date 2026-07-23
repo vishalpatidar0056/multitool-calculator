@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Tools Module</title>
+    <link rel="stylesheet" href="geometry-style.css">
+    <script src="geometry-script.js" defer></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+<!-- Dark/Light Mode Button -->
+<button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+    <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+</button>
+        <header>
+            <h1>Geometry Tools</h1>
+            <p>MADE BY LUFFY </p>
+        </header>
+
+        <div class="tools-grid">
+            <!-- Tool 1: Circle & Sphere -->
+            <div class="tool-card">
+                <h2>Circle & Sphere</h2>
+                <div class="input-group">
+                    <label>Radius (r):</label>
+                    <input type="number" id="geo-radius" placeholder="e.g., 5">
+                </div>
+                <button class="btn accent" id="btn-circle">Calculate Properties</button>
+                <div class="result-box" id="circle-result">Result will appear here</div>
+            </div>
+
+            <!-- Tool 2: Rectangle & Rectangular Prism -->
+            <div class="tool-card">
+                <h2>Rectangle & Prism</h2>
+                <div class="row-inputs">
+                    <div class="input-group">
+                        <label>Length (l):</label>
+                        <input type="number" id="geo-length" placeholder="e.g., 10">
+                    </div>
+                    <div class="input-group">
+                        <label>Width (w):</label>
+                        <input type="number" id="geo-width" placeholder="e.g., 5">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Height (h) - Optional for 3D:</label>
+                    <input type="number" id="geo-height-prism" placeholder="e.g., 4">
+                </div>
+                <button class="btn accent" id="btn-rect">Calculate Properties</button>
+                <div class="result-box" id="rect-result">Result will appear here</div>
+            </div>
+
+            <!-- Tool 3: Cylinder & Cone -->
+            <div class="tool-card">
+                <h2>Cylinder & Cone</h2>
+                <div class="row-inputs">
+                    <div class="input-group">
+                        <label>Base Radius (r):</label>
+                        <input type="number" id="geo-cyl-radius" placeholder="e.g., 3">
+                    </div>
+                    <div class="input-group">
+                        <label>Height (h):</label>
+                        <input type="number" id="geo-cyl-height" placeholder="e.g., 8">
+                    </div>
+                </div>
+                <button class="btn accent" id="btn-cyl">Calculate Properties</button>
+                <div class="result-box" id="cyl-result">Result will appear here</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

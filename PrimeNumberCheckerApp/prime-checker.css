@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --accent: #8b5cf6; /* Vivid Violet Accent */
+    --accent-hover: #7c3aed;
+    --accent-rgb: 139, 92, 246; 
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Outfit', sans-serif; }
+body { background: transparent; color: #f8fafc; padding: 20px; overflow-y: overlay; }
+body::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
+
+.app-container { max-width: 600px; margin: 0 auto; padding-bottom: 50px; }
+header { text-align: center; margin-bottom: 50px; position: relative; }
+header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; background: linear-gradient(90deg, #ffffff, #94a3b8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; position: relative; }
+header h1::after { content: attr(data-text); position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(90deg, var(--accent), #3b82f6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: blur(24px); opacity: 0.4; z-index: -1; }
+header p { color: #94a3b8; font-size: 1.1rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+
+.tools-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.tool-card { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.tool-card:hover { transform: translateY(-5px); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.2); }
+.tool-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; color: #ffffff; }
+
+.input-group { display: flex; flex-direction: column; margin-bottom: 20px; width: 100%; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+input { background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff; padding: 16px; border-radius: 12px; font-size: 1.1rem; outline: none; transition: 0.3s; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); width: 100%; }
+input:focus { border-color: var(--accent); background: rgba(0, 0, 0, 0.4); box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.15), inset 0 2px 4px rgba(0,0,0,0.2); }
+
+.btn { padding: 16px 24px; border: none; border-radius: 14px; font-size: 1.1rem; font-weight: 700; color: white; cursor: pointer; transition: 0.3s; margin-top: 10px; width: 100%; }
+.btn.accent { background-image: linear-gradient(to right, var(--accent) 0%, var(--accent-hover) 100%); box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.2), inset 0 1px 0 rgba(255,255,255,0.4); }
+.btn.accent:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(var(--accent-rgb), 0.4); }
+
+.result-box { margin-top: 24px; padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 1.1rem; line-height: 1.6; position: relative; overflow: hidden; word-break: break-word; }
+.result-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent); }
+.result-box strong { color: var(--accent); font-size: 1.5rem; display: block; margin-top: 10px; }
+
+/* Status Colors for Prime Results */
+.is-prime { color: #10b981 !important; text-shadow: 0 0 10px rgba(16, 185, 129, 0.3); }
+.not-prime { color: #ef4444 !important; text-shadow: 0 0 10px rgba(239, 68, 68, 0.3); }
+
+/* Theme Button Base */
+.theme-btn { position: absolute; top: 20px; left: 20px; padding: 12px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0, 0, 0, 0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); transition: 0.3s; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.theme-btn:hover { background: rgba(255, 255, 255, 0.1); transform: scale(1.05); }
+
+/* =========================================
+   LOCKED-IN LIGHT MODE OVERRIDES
+   ========================================= */
+body.light-theme { color: #0f172a !important; }
+
+body.light-theme .tool-card,
+body.light-theme .result-box {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
+    color: #0f172a !important;
+}
+
+body.light-theme input {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    color: #0f172a !important;
+}
+
+body.light-theme h2,
+body.light-theme .input-group label,
+body.light-theme header p {
+    color: #475569 !important;
+}
+
+body.light-theme header h1 {
+    background: linear-gradient(90deg, #0f172a, #334155) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+}
+
+body.light-theme .btn.accent { color: white !important; }
+
+body.light-theme .theme-btn {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}

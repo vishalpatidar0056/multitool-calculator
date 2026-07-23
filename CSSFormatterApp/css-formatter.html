@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Formatter</title>
+    <link rel="stylesheet" href="css-formatter.css">
+    <!-- Industry standard CSS beautifier -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.9/beautify-css.min.js"></script>
+    <script src="css-formatter.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="CSS Formatter">CSS Formatter</h1>
+            <p>Clean and Indent CSS Styles</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="code-workspace">
+                    
+                    <!-- Input Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Raw CSS</h2>
+                            <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        </div>
+                        <textarea id="css-input" placeholder="Paste your minified or messy CSS here...&#10;Example:&#10;body{margin:0;padding:0;background:#fff;} .btn{color:red;}"></textarea>
+                        <button class="btn accent full-btn" id="btn-format">Format CSS</button>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Formatted Output</h2>
+                            <button class="btn accent small-btn copy-btn" data-copy="css-output">Copy</button>
+                        </div>
+                        <textarea id="css-output" readonly placeholder="Your structured CSS will appear here..."></textarea>
+                        
+                        <!-- Error Message Box -->
+                        <div id="error-msg" class="error-msg" style="display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

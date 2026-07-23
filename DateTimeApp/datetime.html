@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time Module</title>
+    <link rel="stylesheet" href="datetime-style.css">
+    <script src="datetime-script.js" defer></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+<!-- Dark/Light Mode Button -->
+<button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+    <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+</button>
+        <header>
+            <h1>Date & Time Tools</h1>
+            <p>MADE BY LUFFY </p>
+        </header>
+
+        <div class="tools-grid">
+            <!-- Tool 1: Age Calculator -->
+            <div class="tool-card">
+                <h2>Age Calculator</h2>
+                <div class="input-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" id="age-dob">
+                </div>
+                <button class="btn accent" id="btn-age">Calculate Exact Age</button>
+                <div class="result-box" id="age-result">Result will appear here</div>
+            </div>
+
+            <!-- Tool 2: Date Difference -->
+            <div class="tool-card">
+                <h2>Date Difference</h2>
+                <div class="row-inputs">
+                    <div class="input-group">
+                        <label>Start Date:</label>
+                        <input type="date" id="diff-start">
+                    </div>
+                    <div class="input-group">
+                        <label>End Date:</label>
+                        <input type="date" id="diff-end">
+                    </div>
+                </div>
+                <button class="btn accent" id="btn-diff">Calculate Difference</button>
+                <div class="result-box" id="diff-result">Result will appear here</div>
+            </div>
+
+            <!-- Tool 3: Live Countdown -->
+            <div class="tool-card countdown-card">
+                <h2>Event Countdown</h2>
+                <div class="input-group">
+                    <label>Target Date & Time:</label>
+                    <input type="datetime-local" id="countdown-target">
+                </div>
+                <div class="button-group">
+                    <button class="btn accent" id="btn-start-timer">Start Timer</button>
+                    <button class="btn secondary" id="btn-stop-timer">Stop</button>
+                </div>
+                
+                <div class="countdown-display" id="countdown-display">
+                    <div class="time-box"><span id="cd-days">00</span><small>Days</small></div>
+                    <div class="time-box"><span id="cd-hours">00</span><small>Hours</small></div>
+                    <div class="time-box"><span id="cd-mins">00</span><small>Mins</small></div>
+                    <div class="time-box"><span id="cd-secs">00</span><small>Secs</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Calculator</title>
+    <link rel="stylesheet" href="mean-calculator.css">
+    <script src="mean-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Mean Calculator">Mean Calculator</h1>
+            <p>Calculate the Average of a Dataset</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Enter Numbers</h2>
+                    <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Separate numbers by commas, spaces, or newlines</label>
+                    <textarea id="data-input" placeholder="e.g. 12, 45, 87, 23&#10;or paste a column from Excel..."></textarea>
+                </div>
+
+                <button class="btn accent" id="btn-calc">Calculate Mean</button>
+                
+                <div class="result-box" id="calc-result">
+                    Enter your dataset to see the statistical breakdown.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

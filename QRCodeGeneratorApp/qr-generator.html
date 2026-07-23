@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="qr-generator.css">
+    <!-- Pulls in the standard QRCode.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="qr-generator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="QR Generator">QR Generator</h1>
+            <p>Create Scannable Links Instantly</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Create QR Code</h2>
+                
+                <div class="input-group">
+                    <label>Enter URL, Email, or Text</label>
+                    <input type="text" id="qr-input" placeholder="e.g. https://yourwebsite.com">
+                </div>
+
+                <button class="btn accent" id="btn-generate">Generate QR</button>
+                
+                <div class="result-box" id="qr-container">
+                    <p id="qr-placeholder" style="color: var(--text-secondary);">Your QR code will appear here.</p>
+                    
+                    <!-- The QR Code image will be injected here by Javascript -->
+                    <div id="qr-output"></div>
+                    
+                    <!-- NEW: Hidden Download Button -->
+                    <button class="btn accent" id="btn-download" style="display: none; margin-top: 20px; width: auto; padding: 12px 30px;">
+                        Download Image
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

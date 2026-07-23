@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Evaluator</title>
+    <link rel="stylesheet" href="expression-evaluator.css">
+    <!-- Industry standard Math library for safe and advanced evaluation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="expression-evaluator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Math Evaluator">Math Evaluator</h1>
+            <p>Solve Complex Mathematical Expressions</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Enter Expression</h2>
+                    <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Supports arithmetic, parentheses, and functions like sqrt() or sin()</label>
+                    <input type="text" id="math-input" placeholder="e.g. 5 * (12 + 8) / sqrt(16)" autocomplete="off">
+                </div>
+
+                <button class="btn accent" id="btn-calc">Evaluate</button>
+                
+                <div class="result-box" id="calc-result">
+                    <span style="color: var(--text-secondary);">Your result will appear here.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

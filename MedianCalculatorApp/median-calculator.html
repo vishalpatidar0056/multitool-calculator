@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median Calculator</title>
+    <link rel="stylesheet" href="median-calculator.css">
+    <script src="median-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Median Calc">Median Calc</h1>
+            <p>Sort & Find the Exact Middle</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Median Visualizer</h2>
+                </div>
+                <p class="subtitle">Paste any messy list of numbers. The engine will sort them and highlight the mathematical center.</p>
+                
+                <textarea id="data-input" placeholder="Paste your data here...&#10;Example: 8, 2, 45, 12, 9, 3"></textarea>
+
+                <!-- Visualization Area -->
+                <div class="visualizer-panel">
+                    <h3>Sorted Data Array:</h3>
+                    <div id="number-chips" class="chip-container">
+                        <span class="empty-state">Waiting for data...</span>
+                    </div>
+                </div>
+
+                <!-- Logic & Result Area -->
+                <div class="logic-row">
+                    <div class="logic-explanation" id="logic-text">
+                        The list is currently empty.
+                    </div>
+                    <div class="result-box">
+                        <span>Median:</span>
+                        <span id="final-result" class="result-value">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="scientific-calculator.css">
+    <script src="scientific-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Scientific Calc">Scientific Calc</h1>
+            <p>Advanced Mathematical Engine</p>
+        </header>
+
+        <div class="calc-wrapper">
+            <div class="calculator-ui">
+                <!-- Dual Line Display -->
+                <div class="display-screen">
+                    <div class="status-indicators">
+                        <span id="angle-status">DEG</span>
+                    </div>
+                    <div class="history-line" id="history"></div>
+                    <div class="input-line" id="display">0</div>
+                </div>
+
+                <!-- 6-Column Grid Layout -->
+                <div class="keypad">
+                    <!-- Row 1 -->
+                    <button class="btn mode-btn" data-action="toggle-angle">DEG</button>
+                    <button class="btn sci-btn" data-val="sin(">sin</button>
+                    <button class="btn sci-btn" data-val="cos(">cos</button>
+                    <button class="btn sci-btn" data-val="tan(">tan</button>
+                    <button class="btn action-btn danger" data-action="clear">C</button>
+                    <button class="btn action-btn danger" data-action="delete">DEL</button>
+
+                    <!-- Row 2 -->
+                    <button class="btn sci-btn" data-val="log(">log</button>
+                    <button class="btn sci-btn" data-val="ln(">ln</button>
+                    <button class="btn sci-btn" data-val="(">(</button>
+                    <button class="btn sci-btn" data-val=")">)</button>
+                    <button class="btn sci-btn" data-val="!">n!</button>
+                    <button class="btn op-btn" data-val="÷">÷</button>
+
+                    <!-- Row 3 -->
+                    <button class="btn sci-btn" data-val="√(">√</button>
+                    <button class="btn sci-btn" data-val="^">xʸ</button>
+                    <button class="btn num-btn" data-val="7">7</button>
+                    <button class="btn num-btn" data-val="8">8</button>
+                    <button class="btn num-btn" data-val="9">9</button>
+                    <button class="btn op-btn" data-val="×">×</button>
+
+                    <!-- Row 4 -->
+                    <button class="btn sci-btn" data-val="π">π</button>
+                    <button class="btn sci-btn" data-val="e">e</button>
+                    <button class="btn num-btn" data-val="4">4</button>
+                    <button class="btn num-btn" data-val="5">5</button>
+                    <button class="btn num-btn" data-val="6">6</button>
+                    <button class="btn op-btn" data-val="-">-</button>
+
+                    <!-- Row 5 -->
+                    <button class="btn action-btn span-2" data-val="ANS">ANS</button>
+                    <button class="btn num-btn" data-val="1">1</button>
+                    <button class="btn num-btn" data-val="2">2</button>
+                    <button class="btn num-btn" data-val="3">3</button>
+                    <button class="btn op-btn" data-val="+">+</button>
+
+                    <!-- Row 6 -->
+                    <button class="btn num-btn span-2" data-val="0">0</button>
+                    <button class="btn num-btn" data-val=".">.</button>
+                    <button class="btn equals-btn span-3" data-action="calculate">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

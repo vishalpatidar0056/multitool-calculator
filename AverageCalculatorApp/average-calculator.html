@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+    <link rel="stylesheet" href="average-calculator.css">
+    <script src="average-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Average Calc">Average Calc</h1>
+            <p>Mean, Median, Mode & Weighted Averages</p>
+        </header>
+
+        <div class="tools-grid">
+            
+            <!-- Calculator 1: Basic Statistics -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Basic Statistics</h2>
+                </div>
+                <p class="subtitle">Paste a list of numbers separated by commas, spaces, or new lines.</p>
+                
+                <textarea id="calc1-input" placeholder="e.g. 10, 15, 20, 25.5, 30..."></textarea>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Average (Mean)</span>
+                        <span id="res-mean" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Median (Middle)</span>
+                        <span id="res-median" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Mode (Most Frequent)</span>
+                        <span id="res-mode" class="stat-value">None</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Range (Max - Min)</span>
+                        <span id="res-range" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Sum (Total)</span>
+                        <span id="res-sum" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Count</span>
+                        <span id="res-count" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator 2: Weighted Average -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Weighted Average</h2>
+                </div>
+                <p class="subtitle">Calculate averages where some values count more than others (e.g., Grades).</p>
+                
+                <div class="weight-headers">
+                    <label>Value / Score</label>
+                    <label>Weight (%, Credits, etc.)</label>
+                </div>
+
+                <div id="weight-rows-container">
+                    <!-- 5 Rows by default for clean UI -->
+                    <div class="weight-row">
+                        <input type="number" class="w-val" placeholder="e.g. 85" step="any">
+                        <input type="number" class="w-wt" placeholder="e.g. 20" step="any">
+                    </div>
+                    <div class="weight-row">
+                        <input type="number" class="w-val" placeholder="e.g. 92" step="any">
+                        <input type="number" class="w-wt" placeholder="e.g. 30" step="any">
+                    </div>
+                    <div class="weight-row">
+                        <input type="number" class="w-val" placeholder="" step="any">
+                        <input type="number" class="w-wt" placeholder="" step="any">
+                    </div>
+                    <div class="weight-row">
+                        <input type="number" class="w-val" placeholder="" step="any">
+                        <input type="number" class="w-wt" placeholder="" step="any">
+                    </div>
+                    <div class="weight-row">
+                        <input type="number" class="w-val" placeholder="" step="any">
+                        <input type="number" class="w-wt" placeholder="" step="any">
+                    </div>
+                </div>
+
+                <button class="btn secondary full-btn" id="add-row-btn">+ Add Another Row</button>
+
+                <div class="result-box">
+                    <span>Weighted Average:</span>
+                    <span id="res-weighted" class="result-value">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

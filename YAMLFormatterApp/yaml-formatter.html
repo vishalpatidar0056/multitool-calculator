@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAML Formatter</title>
+    <link rel="stylesheet" href="yaml-formatter.css">
+    <!-- Industry standard YAML parser for JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="yaml-formatter.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="YAML Formatter">YAML Formatter</h1>
+            <p>Beautify and Structure YAML Data</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="code-workspace">
+                    
+                    <!-- Input Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Raw YAML</h2>
+                            <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        </div>
+                        <textarea id="yaml-input" placeholder="Paste your raw or messy YAML here...&#10;Example:&#10;version: '3'&#10;services:&#10;  web:&#10;    image: nginx:latest&#10;    ports:&#10;      - 80:80"></textarea>
+                        <button class="btn accent full-btn" id="btn-format">Format YAML</button>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Formatted Output</h2>
+                            <button class="btn accent small-btn copy-btn" data-copy="yaml-output">Copy</button>
+                        </div>
+                        <textarea id="yaml-output" readonly placeholder="Your structured YAML will appear here..."></textarea>
+                        
+                        <!-- Error Message Box -->
+                        <div id="error-msg" class="error-msg" style="display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

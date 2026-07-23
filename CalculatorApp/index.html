@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- The 'defer' attribute ensures the JS loads after the HTML -->
+    <script src="script.js" defer></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">
+    <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+    <div class="app-container">
+        <!-- Main Calculator -->
+        <div class="calculator">
+            <div class="display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            
+            <div class="buttons">
+                <!-- Advanced Tools -->
+                <button class="btn tool" data-action="sin">sin</button>
+                <button class="btn tool" data-action="cos">cos</button>
+                <button class="btn tool" data-action="tan">tan</button>
+                <button class="btn tool" data-action="log">log</button>
+                <button class="btn tool" data-action="sqrt">√x</button>
+                <button class="btn tool" data-action="square">x²</button>
+                <button class="btn tool" data-action="pi">π</button>
+
+                <!-- Basic Controls & Operators -->
+                <button class="btn action" id="clear">AC</button>
+                <button class="btn action" id="delete">DEL</button>
+                <button class="btn operator" data-operation="÷">÷</button>
+
+                <button class="btn number">7</button>
+                <button class="btn number">8</button>
+                <button class="btn number">9</button>
+                <button class="btn operator" data-operation="×">×</button>
+
+                <button class="btn number">4</button>
+                <button class="btn number">5</button>
+                <button class="btn number">6</button>
+                <button class="btn operator" data-operation="-">-</button>
+
+                <button class="btn number">1</button>
+                <button class="btn number">2</button>
+                <button class="btn number">3</button>
+                <button class="btn operator" data-operation="+">+</button>
+
+                <button class="btn tool" data-action="e">e</button>
+                <button class="btn number">0</button>
+                <button class="btn number">.</button>
+                <button class="btn equals" id="equals">=</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <h2>History</h2>
+            <div class="history-list" id="history-list">
+                <!-- Past calculations will appear here -->
+            </div>
+            <button id="clear-history">Clear History</button>
+        </div>
+    </div>
+    <!-- New Converter Panel -->
+            <div class="converter-panel">
+                <h2>Converter</h2>
+                <div class="converter-controls">
+                    <select id="conv-type">
+                        <option value="kg-lbs">Kilograms to Pounds</option>
+                        <option value="lbs-kg">Pounds to Kilograms</option>
+                        <option value="km-mi">Kilometers to Miles</option>
+                        <option value="mi-km">Miles to Kilometers</option>
+                    </select>
+                    <input type="number" id="conv-input" placeholder="Enter value...">
+                    <button id="convert-btn">Convert</button>
+                    <div id="conv-output">Result: --</div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

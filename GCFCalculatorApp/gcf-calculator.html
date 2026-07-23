@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCF & LCM Calculator</title>
+    <link rel="stylesheet" href="gcf-calculator.css">
+    <script src="gcf-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="GCF & LCM">GCF & LCM</h1>
+            <p>Factors, Multiples & Prime Breakdowns</p>
+        </header>
+
+        <div class="tools-grid">
+            
+            <!-- Calculator 1: GCF & LCM for a list -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Group Calculator</h2>
+                </div>
+                <p class="subtitle">Find the Greatest Common Factor and Least Common Multiple for a list of numbers.</p>
+                
+                <div class="input-group">
+                    <label>Enter numbers separated by commas</label>
+                    <textarea id="list-input" placeholder="e.g. 12, 18, 24"></textarea>
+                </div>
+
+                <div class="results-row">
+                    <div class="result-box">
+                        <span>GCF:</span>
+                        <span id="gcf-result" class="result-value">0</span>
+                    </div>
+                    <div class="result-box">
+                        <span>LCM:</span>
+                        <span id="lcm-result" class="result-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator 2: Prime Factorization -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Prime Factorization</h2>
+                </div>
+                <p class="subtitle">Break down any whole number into its prime factors.</p>
+                
+                <div class="input-group">
+                    <label>Enter a single number</label>
+                    <input type="number" id="prime-input" placeholder="e.g. 360" step="1" min="2">
+                </div>
+
+                <div class="result-box factor-box">
+                    <span>Prime Breakdown:</span>
+                    <span id="prime-result" class="result-value factor-value">None</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

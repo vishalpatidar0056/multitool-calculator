@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratio Calculator</title>
+    <link rel="stylesheet" href="ratio-calculator.css">
+    <script src="ratio-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Ratio Calc">Ratio Calculater</h1>
+            <p>Proportions, Simplification & Sharing</p>
+        </header>
+
+        <div class="tools-grid">
+            
+            <!-- Calculator 1: Equivalent Ratio (Solve for X) -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Equivalent Ratio</h2>
+                </div>
+                <p class="subtitle">Solve for the unknown value (A : B = C : X)</p>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>Value A</label>
+                        <input type="number" id="calc1-a" placeholder="16" step="any">
+                    </div>
+                    <div class="colon-divider">:</div>
+                    <div class="input-group">
+                        <label>Value B</label>
+                        <input type="number" id="calc1-b" placeholder="9" step="any">
+                    </div>
+                </div>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>Value C</label>
+                        <input type="number" id="calc1-c" placeholder="1920" step="any">
+                    </div>
+                    <div class="colon-divider">:</div>
+                    <div class="input-group">
+                        <label style="color: var(--accent);">Value X (Result)</label>
+                        <input type="number" id="calc1-res" placeholder="1080" readonly class="readonly-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator 2: Simplify Ratio -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Simplify Ratio</h2>
+                </div>
+                <p class="subtitle">Reduce a ratio to its smallest integer form</p>
+                <div class="calc-row">
+                    <div class="input-group">
+                        <label>Value A</label>
+                        <input type="number" id="calc2-a" placeholder="24" step="1">
+                    </div>
+                    <div class="colon-divider">:</div>
+                    <div class="input-group">
+                        <label>Value B</label>
+                        <input type="number" id="calc2-b" placeholder="36" step="1">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <span>Simplified:</span>
+                    <span id="calc2-result" class="result-value">0 : 0</span>
+                </div>
+            </div>
+
+            <!-- Calculator 3: Divide by Ratio -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Divide Amount</h2>
+                </div>
+                <p class="subtitle">Split a total into parts (e.g. profits split 3:2 or 1:2:1)</p>
+                <div class="calc-row-stack">
+                    <div class="input-group">
+                        <label>Total Amount</label>
+                        <input type="number" id="calc3-total" placeholder="1000" step="any">
+                    </div>
+                    <div class="input-group">
+                        <label>Ratio (Use colons, e.g. 3:2)</label>
+                        <input type="text" id="calc3-ratio" placeholder="3:2">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <span>Shares:</span>
+                    <span id="calc3-result" class="result-value" style="font-size: 1.5rem;">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

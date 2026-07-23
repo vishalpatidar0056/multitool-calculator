@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multitool  Calculator</title>
+    
+    <!-- Premium AI Typography: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="dashboard-style.css">
+    <script src="dashboard-script.js" defer></script>
+</head>
+<body>
+    <!-- Animated Aurora Background -->
+    <div class="aurora-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Floating Glass Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <div class="logo-3d">
+                    <span class="logo-glow"></span>
+                   <div class="footer-logo"> <img src="icons/multi footer.png" alt="Logo" class="footer-logo"></div>
+                </div>
+                <h2 class="animated-title">Multitool<br>Calculator</h2>
+            </div>
+            
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input type="text" id="tool-search" placeholder="Search tools..." autocomplete="off">
+                    <div class="input-glow"></div>
+                </div>
+            </div>
+
+
+
+
+           
+          
+           
+        <!-- Sidebar Logo/Header (Adjust if you had a title here) -->
+        <div style="padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px;">
+            <h2 style="font-size: 1.2rem; font-weight: 800; color: #fff;">Tools categories</h2>
+        </div>
+
+        <nav class="nav-menu">
+
+
+
+
+             <button class="nav-dropdown-btn active">
+            Advanced Calculator 
+            <!-- SVG Arrow Icon -->
+            <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        
+        <!-- The Container holding all the tools for this section -->
+        <div class="nav-dropdown-content" style="max-height: 2000px;"> 
+
+        <button class="nav-btn " data-target="CalculatorApp/index.html">
+          <img src="icons/calc-icon.png" alt="Calculator" class="sidebar-icon"> Standard Calculator
+         </button>
+         <button class="nav-btn" data-target="LCMApp/index.html">
+           <img src="icons/lcm-icon.png" alt="LCM" class="sidebar-icon"> LCM Calculator
+         </button>
+          <button class="nav-btn" data-target="ScientificCalculatorApp/scientific-calculator.html">
+                <img src="icons/scientific-calculator-icon.png" alt="Scientific Calc" class="sidebar-icon"> Scientific Calculator
+         </button>
+          <button class="nav-btn" data-target="EngineeringCalculatorApp/engineering-calculator.html">
+                <img src="icons/engineering-calculator-icon.png" alt="Engineering Calc" class="sidebar-icon"> Engineering Calculator
+         </button>
+               <button class="nav-btn" data-target="PercentageCalculatorApp/percentage-calculator.html">
+                <img src="icons/percentage-calculator-icon.png" alt="Percentage Calc" class="sidebar-icon"> Percentage Calculator
+         </button>
+         <button class="nav-btn" data-target="RatioCalculatorApp/ratio-calculator.html">
+                <img src="icons/ratio-calculator-icon.png" alt="Ratio Calc" class="sidebar-icon"> Ratio Calculator
+         </button>
+         <button class="nav-btn" data-target="ProportionCalculatorApp/proportion-calculator.html">
+                <img src="icons/proportion-calculator-icon.png" alt="Proportion Calc" class="sidebar-icon"> Proportion Calculator
+         </button>
+         <button class="nav-btn" data-target="AverageCalculatorApp/average-calculator.html">
+                <img src="icons/average-calculator-icon.png" alt="Average Calc" class="sidebar-icon"> Average Calculator
+         </button>
+          <button class="nav-btn" data-target="MeanCalculatorApp/mean-calculator.html">
+               <img src="icons/mean-calculator-icon.png" alt="Mean Calculator" class="sidebar-icon"> Mean Calculator
+         </button>
+        <button class="nav-btn" data-target="MedianCalculatorApp/median-calculator.html">
+              <img src="icons/median-calculator-icon.png" alt="Median Calc" class="sidebar-icon"> Median Calculator
+        </button>
+        <button class="nav-btn" data-target="ModeCalculatorApp/mode-calculator.html">
+             <img src="icons/mode-calculator-icon.png" alt="Mode Calculator" class="sidebar-icon"> Mode Calculator
+         </button>
+         <button class="nav-btn" data-target="GCFCalculatorApp/gcf-calculator.html">
+           <img src="icons/gcf-calculator-icon.png" alt="GCF Calc" class="sidebar-icon"> GCF & LCM Calc
+         </button>
+         <button class="nav-btn" data-target="ExpressionEvaluatorApp/expression-evaluator.html">
+            <img src="icons/expression-evaluator-icon.png" alt="Expression Evaluator" class="sidebar-icon"> Expression Evaluator
+         </button>
+          <button class="nav-btn" data-target="PrimeNumberCheckerApp/prime-checker.html">
+           <img src="icons/prime-checker-icon.png" alt="Prime Number Checker" class="sidebar-icon"> Prime Number Checker
+         </button>
+
+         </div>
+
+
+        <button class="nav-dropdown-btn active">
+            Main Tools 
+            <!-- SVG Arrow Icon -->
+            <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        
+        
+        <div class="nav-dropdown-content" style="max-height: 2000px;"> 
+            
+    <button class="nav-btn" data-target="FinanceApp/finance.html">
+        <img src="icons/finance-icon.png" alt="Finance" class="sidebar-icon"> Financial Tools
+    </button>
+    <button class="nav-btn" data-target="DateTimeApp/datetime.html">
+        <img src="icons/time-icon.png" alt="Time" class="sidebar-icon"> Date & Time
+    </button>
+    <button class="nav-btn" data-target="GeometryApp/geometry.html">
+        <img src="icons/geometry-icon.png" alt="Geometry" class="sidebar-icon"> Geometry Tools
+    </button>
+    <button class="nav-btn" data-target="ConverterApp/converter.html">
+        <img src="icons/converter-icon.png" alt="Converter" class="sidebar-icon"> Unit Converter
+    </button>
+     <button class="nav-btn" data-target="StatisticsApp/statistics.html">
+        <img src="icons/stats-icon.png" alt="Statistics" class="sidebar-icon"> Data & Statistics
+     </button>
+     <button class="nav-btn" data-target="AlgebraApp/algebra.html">
+        <img src="icons/algebra-icon.png" alt="Algebra" class="sidebar-icon"> Algebra Solvers
+     </button>
+     
+     <button class="nav-btn" data-target="QRCodeGeneratorApp/qr-generator.html">
+          <img src="icons/qr-generator-icon.png" alt="QR Code Generator" class="sidebar-icon"> QR Code Generator
+     </button>
+     <button class="nav-btn" data-target="BarcodeGeneratorApp/barcode-generator.html">
+          <img src="icons/barcode-generator-icon.png" alt="Barcode Generator" class="sidebar-icon"> Barcode Generator
+     </button>
+    
+
+        </div>
+
+
+    
+    
+        <button class="nav-dropdown-btn active">
+            Programming Tools 
+            <!-- SVG Arrow Icon -->
+            <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        
+        <!-- The Container holding all the tools for this section -->
+        <div class="nav-dropdown-content" style="max-height: 2000px;"> 
+            
+            <button class="nav-btn" data-target="JSONFormatterApp/json-formatter.html">
+                <img src="icons/json-formatter-icon.png" alt="JSON Formatter" class="sidebar-icon"> JSON Formatter
+            </button>
+            <button class="nav-btn" data-target="JSONValidatorApp/json-validator.html">
+                <img src="icons/json-validator-icon.png" alt="JSON Validator" class="sidebar-icon"> JSON Validator
+            </button>
+            <button class="nav-btn" data-target="JSONViewerApp/json-viewer.html">
+                <img src="icons/json-viewer-icon.png" alt="JSON Viewer" class="sidebar-icon"> JSON Viewer
+            </button>
+            <button class="nav-btn" data-target="DevToolsApp/dev-tools.html">
+                <img src="icons/dev-icon.png" alt="Developer" class="sidebar-icon"> Base64 Encoder/Decoder
+            </button>
+            <button class="nav-btn" data-target="ColorPickerApp/color-picker.html">
+                  <img src="icons/color-picker-icon.png" alt="Color Picker" class="sidebar-icon"> Color Picker
+            </button>
+            <button class="nav-btn" data-target="XMLFormatterApp/xml-formatter.html">
+                <img src="icons/xml-formatter-icon.png" alt="XML Formatter" class="sidebar-icon"> XML Formatter
+            </button>
+            <button class="nav-btn" data-target="XMLValidatorApp/xml-validator.html">
+                <img src="icons/xml-validator-icon.png" alt="XML Validator" class="sidebar-icon"> XML Validator
+            </button>
+            <button class="nav-btn" data-target="YAMLFormatterApp/yaml-formatter.html">
+                <img src="icons/yaml-formatter-icon.png" alt="YAML Formatter" class="sidebar-icon"> YAML Formatter
+            </button>
+            <button class="nav-btn" data-target="HTMLFormatterApp/html-formatter.html">
+                <img src="icons/html-formatter-icon.png" alt="HTML Formatter" class="sidebar-icon"> HTML Formatter
+            </button>
+            <button class="nav-btn" data-target="CSSFormatterApp/css-formatter.html">
+                <img src="icons/css-formatter-icon.png" alt="CSS Formatter" class="sidebar-icon"> CSS Formatter
+            </button>
+
+        </div> <!-- Closes the dropdown content -->
+
+
+        <button class="nav-dropdown-btn active">
+            Health & Fitness
+            <!-- SVG Arrow Icon -->
+            <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        
+        <div class="nav-dropdown-content" style="max-height: 2000px;"> 
+
+         <button class="nav-btn" data-target="HealthApp/health.html">
+          <img src="icons/health-icon.png" alt="Health" class="sidebar-icon"> BMI Calculator
+         </button>
+
+
+
+         </div>
+        
+
+        </nav> <!-- Closes the navigation menu -->
+    </aside> 
+
+
+    
+    <main class="main-content">
+        <iframe id="app-frame" src="CalculatorApp/index.html" title="Active Application"></iframe>
+    </main>
+
+</div> <!-- Closes the whole dashboard container -->
+
+
+<!-- ==========================================
+         OMNIBRAIN ENERGY CORE (AI ASSISTANT)
+         ========================================== -->
+    
+    <!-- Floating Energy Sphere -->
+    <div id="ai-floating-container" class="ai-floating-container">
+        <div id="ai-thought-bubble" class="ai-glass-tooltip">
+            <!-- Random thoughts appear here -->
+        </div>
+        
+        <div id="ai-orb-wrapper" class="ai-orb-wrapper">
+            <div class="orb-glow-layer"></div>
+            <button id="ai-orb" class="ai-orb-glass">
+                <div class="ring outer-ring"></div>
+                <div class="ring inner-ring"></div>
+                <div class="core-pulse"></div>
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+                <div class="particle p3"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cinematic Glass Panel -->
+    <div id="ai-chat-panel" class="ai-chat-panel">
+        <div class="panel-animated-border"></div>
+        <div class="panel-inner-glass">
+            
+            <!-- Scanner Header -->
+            <div class="chat-header">
+                <div class="header-scanner"></div>
+                <div class="chat-title">
+                    <div class="ai-avatar-mini">
+                        <div class="mini-ring"></div>
+                        <div class="mini-core"></div>
+                    </div>
+                    <span>MULTITOOL AI</span>
+                    <span class="status-text">Operational</span>
+                </div>
+                <div class="header-controls">
+                    <button class="glass-icon-btn">—</button>
+                    <button class="glass-icon-btn">□</button>
+                    <button id="ai-close-btn" class="glass-icon-btn close-btn">×</button>
+                </div>
+            </div>
+
+            <!-- Chat History with Grid -->
+            <div id="chat-history" class="chat-history">
+                <div class="animated-grid-bg"></div>
+                <div class="cursor-spotlight"></div>
+                <!-- Messages inject here -->
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <div class="input-glass-wrapper">
+                    <textarea id="chat-input" placeholder="Ask something difficult..."></textarea>
+                    <div class="input-glow"></div>
+                </div>
+                <button id="chat-send-btn" class="send-glass-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link the AI Logic Script -->
+    <script src="ai-chat.js"></script>
+
+<!-- Script to make the Dropdowns open and close -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownBtns = document.querySelectorAll('.nav-dropdown-btn');
+
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                    content.style.maxHeight = "0px";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

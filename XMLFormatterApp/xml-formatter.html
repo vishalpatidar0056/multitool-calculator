@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Formatter</title>
+    <link rel="stylesheet" href="xml-formatter.css">
+    <script src="xml-formatter.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="XML Formatter">XML Formatter</h1>
+            <p>Beautify and Structure XML Data</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="code-workspace">
+                    
+                    <!-- Input Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Raw XML</h2>
+                            <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        </div>
+                        <textarea id="xml-input" placeholder='Paste your minified or raw XML here...&#10;Example:&#10;<note><to>Tove</to><from>Jani</from><heading>Reminder</heading><body>Do not forget me this weekend!</body></note>'></textarea>
+                        <button class="btn accent full-btn" id="btn-format">Format XML</button>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Formatted Output</h2>
+                            <button class="btn accent small-btn copy-btn" data-copy="xml-output">Copy</button>
+                        </div>
+                        <textarea id="xml-output" readonly placeholder="Your formatted XML will appear here..."></textarea>
+                        
+                        <!-- Error Message Box -->
+                        <div id="error-msg" class="error-msg" style="display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

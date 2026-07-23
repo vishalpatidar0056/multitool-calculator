@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Module</title>
+    <link rel="stylesheet" href="statistics-style.css">
+    <script src="statistics-script.js" defer></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+<!-- Dark/Light Mode Button -->
+<button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+    <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+</button>
+        <header>
+            <h1>Data & Statistics</h1>
+            <p>MADE BY LUFFY </p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <h2>Dataset Analyzer</h2>
+                <div class="input-group">
+                    <label>Enter your dataset (comma-separated numbers):</label>
+                    <textarea id="stat-input" rows="4" placeholder="e.g., 12, 45, 67, 12, 89, 34, 12..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn accent" id="btn-calculate">Calculate Statistics</button>
+                    <button class="btn secondary" id="btn-clear">Clear Data</button>
+                </div>
+
+                <div class="error-msg" id="stat-error"></div>
+
+                <div class="stats-result-grid" id="stats-results" style="display: none;">
+                    <div class="stat-box">
+                        <small>Count (n)</small>
+                        <span id="res-count">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Sum</small>
+                        <span id="res-sum">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Mean (Average)</small>
+                        <span id="res-mean">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Median</small>
+                        <span id="res-median">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Mode</small>
+                        <span id="res-mode" style="font-size: 1.2rem;">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Range (Min - Max)</small>
+                        <span id="res-range">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Variance (Pop)</small>
+                        <span id="res-variance">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <small>Standard Deviation</small>
+                        <span id="res-stddev">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

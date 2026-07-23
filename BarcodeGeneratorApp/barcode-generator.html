@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Generator</title>
+    <link rel="stylesheet" href="barcode-generator.css">
+    <!-- Pulls in the standard JsBarcode library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="barcode-generator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Barcode Engine">Barcode Engine</h1>
+            <p>Generate Standardized Barcodes</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h2>Create Barcode</h2>
+                
+                <div class="input-group">
+                    <label>Enter Product ID, Serial, or Text</label>
+                    <input type="text" id="barcode-input" placeholder="e.g. 1234567890">
+                </div>
+
+                <button class="btn accent" id="btn-generate">Generate Barcode</button>
+                
+                <div class="result-box" id="barcode-container">
+                    <p id="barcode-placeholder" style="color: var(--text-secondary);">Your barcode will appear here.</p>
+                    
+                    <!-- The Barcode will be drawn directly onto this canvas element -->
+                    <canvas id="barcode-output" style="display: none;"></canvas>
+
+                    <!-- Hidden Download Button -->
+                    <button class="btn accent" id="btn-download" style="display: none; margin-top: 20px; width: auto; padding: 12px 30px;">
+                        Download Barcode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

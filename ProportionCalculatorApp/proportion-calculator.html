@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proportion Calculator</title>
+    <link rel="stylesheet" href="proportion-calculator.css">
+    <script src="proportion-calculator.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="Proportion">Proportion</h1>
+            <p>Direct, Inverse & Aspect Scaling</p>
+        </header>
+
+        <div class="tools-grid">
+            
+            <!-- Calculator 1: Direct Proportion -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Direct Proportion</h2>
+                </div>
+                <p class="subtitle">As X increases, Y increases (e.g., If 5 items cost $20, 8 items cost...)</p>
+                
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label>Item 1 (X)</label>
+                        <input type="number" id="calc1-x1" placeholder="5" step="any">
+                    </div>
+                    <div class="link-icon">→</div>
+                    <div class="input-group">
+                        <label>Result 1 (Y)</label>
+                        <input type="number" id="calc1-y1" placeholder="20" step="any">
+                    </div>
+                </div>
+
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label>Item 2 (X)</label>
+                        <input type="number" id="calc1-x2" placeholder="8" step="any">
+                    </div>
+                    <div class="link-icon" style="color: var(--accent);">→</div>
+                    <div class="input-group">
+                        <label style="color: var(--accent);">Result 2 (Y)</label>
+                        <input type="number" id="calc1-res" placeholder="32" readonly class="readonly-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator 2: Inverse Proportion -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Inverse Proportion</h2>
+                </div>
+                <p class="subtitle">As X increases, Y decreases (e.g., If 4 workers take 10 days, 8 workers take...)</p>
+                
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label>Condition 1 (X)</label>
+                        <input type="number" id="calc2-x1" placeholder="4" step="any">
+                    </div>
+                    <div class="link-icon">→</div>
+                    <div class="input-group">
+                        <label>Time/Result (Y)</label>
+                        <input type="number" id="calc2-y1" placeholder="10" step="any">
+                    </div>
+                </div>
+
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label>Condition 2 (X)</label>
+                        <input type="number" id="calc2-x2" placeholder="8" step="any">
+                    </div>
+                    <div class="link-icon" style="color: var(--accent);">→</div>
+                    <div class="input-group">
+                        <label style="color: var(--accent);">New Time (Y)</label>
+                        <input type="number" id="calc2-res" placeholder="5" readonly class="readonly-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator 3: Aspect Ratio Resizer -->
+            <div class="tool-card">
+                <div class="panel-header">
+                    <h2>Aspect Ratio Resizer</h2>
+                </div>
+                <p class="subtitle">Scale image/video dimensions perfectly (Type in either New Width or New Height)</p>
+                
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label>Original Width</label>
+                        <input type="number" id="orig-w" placeholder="1920" step="any">
+                    </div>
+                    <div class="link-icon">×</div>
+                    <div class="input-group">
+                        <label>Original Height</label>
+                        <input type="number" id="orig-h" placeholder="1080" step="any">
+                    </div>
+                </div>
+
+                <div class="calc-row-4">
+                    <div class="input-group">
+                        <label style="color: var(--accent);">New Width</label>
+                        <input type="number" id="new-w" placeholder="1280" step="any" class="active-input">
+                    </div>
+                    <div class="link-icon" style="color: var(--accent);">×</div>
+                    <div class="input-group">
+                        <label style="color: var(--accent);">New Height</label>
+                        <input type="number" id="new-h" placeholder="720" step="any" class="active-input">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatter</title>
+    <link rel="stylesheet" href="html-formatter.css">
+    <!-- Industry standard HTML beautifier (Same engine used in VS Code) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.9/beautify-html.min.js"></script>
+    <script src="html-formatter.js" defer></script>
+</head>
+<body>
+    <!-- Standardized Isolated Theme Button -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <img id="theme-icon" src="../icons/light-mode.png" alt="Theme" width="24" height="24">
+    </button>
+
+    <div class="app-container">
+        <header>
+            <h1 data-text="HTML Formatter">HTML Formatter</h1>
+            <p>Clean and Indent HTML Code</p>
+        </header>
+
+        <div class="tools-grid">
+            <div class="tool-card full-width">
+                <div class="code-workspace">
+                    
+                    <!-- Input Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Raw HTML</h2>
+                            <button class="btn secondary small-btn" id="btn-clear">Clear</button>
+                        </div>
+                        <textarea id="html-input" placeholder='Paste your messy or minified HTML here...&#10;Example:&#10;<div><h1>Title</h1><p>Some text <span>here</span></p></div>'></textarea>
+                        <button class="btn accent full-btn" id="btn-format">Format HTML</button>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <h2>Formatted Output</h2>
+                            <button class="btn accent small-btn copy-btn" data-copy="html-output">Copy</button>
+                        </div>
+                        <textarea id="html-output" readonly placeholder="Your structured HTML will appear here..."></textarea>
+                        
+                        <!-- Error Message Box -->
+                        <div id="error-msg" class="error-msg" style="display: none;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
