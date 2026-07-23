@@ -144,50 +144,45 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Start typing effect slightly delayed
     setTimeout(typeEffect, 1500);
-});
 
-// 6. CMD+K / CTRL+K Search Redirect Logic
+    // 6. CMD+K / CTRL+K Search Redirect Logic
     const searchWrapper = document.querySelector('.search-wrapper');
-    
-    // Function to redirect to dashboard and trigger search focus
+
     const triggerSearch = (e) => {
-        if (e) e.preventDefault(); // Stop default browser behaviors (like focusing URL bar)
-        // Redirect to dashboard with a special URL parameter
+        if (e) e.preventDefault();
         window.location.href = 'dashboard.html?focusSearch=true';
     };
 
-    // Listen for mouse click on the search bar
     if (searchWrapper) {
         searchWrapper.addEventListener('click', triggerSearch);
     }
 
-    // Listen for Cmd+K (Mac) or Ctrl+K (Windows) globally on the landing page
     document.addEventListener('keydown', (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
             triggerSearch(e);
         }
     });
 
-// --- Dark/Light Mode Toggle Logic ---
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
+    // --- Dark/Light Mode Toggle Logic ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
 
-// Check memory: Did the user already choose Light Mode in another tool?
-if (localStorage.getItem('multitool-theme') === 'light') {
-    document.body.classList.add('light-theme');
-    themeIcon.src = '../icons/dark-mode.png';
-}
-
-themeToggle.addEventListener('click', () => {
-    // Toggles the 'light-theme' class on the body
-    document.body.classList.toggle('light-theme');
-    
-    // Swap the icon based on the current theme (Notice the ../ added here!)
-    if (document.body.classList.contains('light-theme')) {
-        themeIcon.src = '../icons/dark-mode.png'; 
-        localStorage.setItem('multitool-theme', 'light'); // Save to memory
-    } else {
-        themeIcon.src = '../icons/light-mode.png'; 
-        localStorage.setItem('multitool-theme', 'dark'); // Save to memory
+    if (localStorage.getItem('multitool-theme') === 'light') {
+        document.body.classList.add('light-theme');
     }
-});
+
+    const updateThemeIconAndStorage = () => {
+        if (!themeIcon) return;
+        const isLight = document.body.classList.contains('light-theme');
+        themeIcon.src = isLight ? '../icons/dark-mode.png' : '../icons/light-mode.png';
+        localStorage.setItem('multitool-theme', isLight ? 'light' : 'dark');
+    };
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            updateThemeIconAndStorage();
+        });
+    }
+
+    updateThemeIconAndStorage();});
